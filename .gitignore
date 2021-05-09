@@ -3,3 +3,9 @@
 ################################################################################
 
 /Database/bin/Debug
+/.vs
+/Services/bin/Debug/netcoreapp3.1
+/Services/obj
+/Web/obj
+/WebApp/bin/Debug/netcoreapp3.1
+/WebApp/obj

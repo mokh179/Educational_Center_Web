@@ -1,0 +1,15 @@
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\bin\Debug\net5.0\Database.deps.json
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\bin\Debug\net5.0\Database.runtimeconfig.json
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\bin\Debug\net5.0\Database.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\bin\Debug\net5.0\Database.dll
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\bin\Debug\net5.0\ref\Database.dll
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\bin\Debug\net5.0\Database.pdb
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\Database.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\Database.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\Database.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\Database.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\Database.dll
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\ref\Database.dll
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\Database.pdb
+C:\Users\Lenovo\source\repos\EducationalCenter\Database\obj\Debug\net5.0\Database.genruntimeconfig.cache
