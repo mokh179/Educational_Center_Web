@@ -13,7 +13,7 @@ namespace Database
         public int Dept_No { get; set; }
         [Required]
         public int DeptName { get; set; }
-        public List<people> Users { get; set; }
+        public List<ApplicationUsers> Users { get; set; }
         public List<DepartmentCourses> DepartmentCourses { get; set; }
     }
 }

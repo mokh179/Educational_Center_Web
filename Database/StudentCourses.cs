@@ -22,7 +22,7 @@ namespace Database
         public int Crs_Id { get; set; }
 
         public int? Degree { get; set; }
-        public people Users { get; set; }
+        public ApplicationUsers Users { get; set; }
 
         public Course Courses { get; set; }
     }
