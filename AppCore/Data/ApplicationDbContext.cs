@@ -21,8 +21,8 @@ namespace AppCore.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            //builder.Entity<DepartmentCourses>().HasKey(e => new { e.crsID, e.depNo });
-            //builder.Entity<StudentCourses>().HasKey(e => new { e.StudentId, e.Crs_Id });
+            builder.Entity<DepartmentCourses>().HasKey(e => new { e.crsID, e.depNo });
+            builder.Entity<StudentCourses>().HasKey(e => new { e.StudentId, e.Crs_Id });
             builder.Entity<ApplicationUsers>().ToTable("Users").Ignore(e => e.PhoneNumberConfirmed);
             builder.Entity<IdentityRole>().ToTable("roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
