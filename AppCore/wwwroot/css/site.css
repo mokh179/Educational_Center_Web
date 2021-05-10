@@ -69,3 +69,14 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.profile-picture{
+    height: 350px;
+    width: 350px;
+    object-fit: cover
+}
+.avatar {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}

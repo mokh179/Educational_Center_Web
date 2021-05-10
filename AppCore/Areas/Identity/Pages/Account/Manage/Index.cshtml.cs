@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Database;
@@ -33,9 +34,19 @@ namespace AppCore.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
+            [Required]
+            [Display(Name ="First Name")]
+            public string FirstName { get; set; }   
+            [Required]
+            [Display(Name ="Last Name")]
+            public string LastName { get; set; }
+
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+
+            [Display(Name = "profile picture")]
+            public byte[] Profilpic { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUsers user)
@@ -47,7 +58,10 @@ namespace AppCore.Areas.Identity.Pages.Account.Manage
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                PhoneNumber = phoneNumber,
+                Profilpic=user.ProfilePic
             };
         }
 
@@ -78,6 +92,37 @@ namespace AppCore.Areas.Identity.Pages.Account.Manage
             }
 
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            var firstname = user.FirstName;
+            var lastname = user.LastName;
+            if (Input.FirstName!=firstname)
+            {
+                user.FirstName = Input.FirstName;
+                await _userManager.UpdateAsync(user);
+            }
+            if (Input.LastName != lastname)
+            {
+                user.LastName = Input.LastName;
+                await _userManager.UpdateAsync(user);
+            }
+            if (Request.Form.Files.Count>0)
+            {
+                var file = Request.Form.Files.FirstOrDefault();
+               
+                using(var fs=new MemoryStream())
+                {
+                    if (fs.Length<2097152)
+                    {
+                        await file.CopyToAsync(fs);
+                        user.ProfilePic = fs.ToArray();
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("File", "The file is too large.");
+                    }
+
+                }
+                await _userManager.UpdateAsync(user);
+            }
             if (Input.PhoneNumber != phoneNumber)
             {
                 var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
